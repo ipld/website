@@ -1,6 +1,6 @@
 # Setup
-path:         ""
-baseurl:      ""
+path:         "https://ipfs.io/ipfs/QmZd9VGXCnhzTxa6kQhkjfZjH4JV9RK7LyTMggXPzybVeg/_site"
+baseurl:      "https://ipfs.io/ipfs/QmZd9VGXCnhzTxa6kQhkjfZjH4JV9RK7LyTMggXPzybVeg/_site"
 markdown:     kramdown
 google_analytics: 
 github:       ipld/ipld.io
