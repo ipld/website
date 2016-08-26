@@ -1,21 +1,21 @@
 {
-  "name": "minimal-cayman",
+  "name": "ipld.io",
   "version": "1.0.0",
-  "description": "A minimal jekyll theme based on Cayman",
+  "description": "The IPLD website",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RichardLitt/minimal-cayman.git"
+    "url": "git+https://github.com/ipld/ipld.io.git"
   },
   "author": "Richard Littauer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RichardLitt/minimal-cayman/issues"
+    "url": "https://github.com/ipld/ipld.io/issues"
   },
-  "homepage": "https://github.com/RichardLitt/minimal-cayman",
+  "homepage": "https://github.com/ipld/ipld.io",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-imagemin": "^3.0.1",
