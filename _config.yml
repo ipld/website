@@ -1,41 +1,41 @@
 # Setup
-path:         http://burntfen.com/minimal-cayman
+path:         ""
 baseurl:      ""
 markdown:     kramdown
-google_analytics: UA-4124866-28
-github:       RichardLitt/minimal-cayman
+google_analytics: 
+github:       ipld/ipld.io
 
 # Metadata
-title:        Minimal Cayman
-description:  A responsive theme for your project on GitHub Pages
+title:        IPLD
+description:  InterPlanetary Linked Data
 license:      MIT
 
 # Favicon
 favicon:
-  mimetype:   image/x-icon
-  name:       favicon.ico
+  mimetype:   image/png
+  name:       favicon.png
 
 # Logo
 # The mimetype is defined by OGP. See http://ogp.me
 # Comment out all of these lines to use title and description in the header
-logo:
-  name:       caiman.png
-  mimetype:       image/png
-  width:      800
-  height:     800
+# logo:
+#   name:       caiman.png
+#   mimetype:   image/png
+#   width:      800
+#   height:     800
 
 # About/contact
 author:
-  name:       Richard Littauer
-  url:        http://burntfen.com
+  name:       Protocol Labs
+  url:        http://ipfs.io
 
 # Open Source Protocol
 # See http://osprotocol.com
 os:
-  repo:     https://github.com/RichardLitt/minimal-cayman
-  src:      git@github.com:RichardLitt/minimal-cayman.git
-  issues:   https://github.com/RichardLitt/minimal-cayman/issues
-  branch:   gh-pages
+  repo:     https://github.com/ipld/ipld.io
+  src:      git@github.com:ipld/ipld.io.git
+  issues:   https://github.com/ipld/ipld.io/issues
+  branch:   master
   rcs_type: git
 
 # Maintainer (normally on GitHub)
