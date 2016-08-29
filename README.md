@@ -1,4 +1,4 @@
-# ipld.io
+# Website
 
 > The IPLD.io website
 
