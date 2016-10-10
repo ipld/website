@@ -21,7 +21,7 @@ jekyll build
 #### Serve
 
 ```
-jsekyll serve
+jekyll serve
 ```
 
 #### Deploy
