@@ -1,44 +1,45 @@
 # Tutorial
-- This tutorial will guide you from the very basics to real example of IPLD.
-- IPLD stands for the Inter Planetary Linked Data
-- When we get data from the internet, we know it comes from the right place, if the URL is https (some times not even! TODO: add symantec & fake certificates), but we don’t know if it was the data we intended to get!
-- The same problem is with links, we don’t know if a link is still linking to the right page
-- Finally, the general problem of the current web is that we trust the source to give us the right data, so other computers in the network cannot really help sharing the same data!
-- These 3 properties are secure linking, distributed naming and immutable content!
-- Where does IPLD fit into this? IPLD is a data format to describe datasets where data can link to other data via cryptographic hashing, IPLD also provides a path scheme to point to some data in the datasets.
-- Let’s unroll what we just said.
+
+This tutorial will teach you about how to use IPLD. We'll start from the very basics, and end with some examples.
+
+IPLD stands for InterPlanetary Linked Data. This is based off of [IPFS](https://ipfs.io), which is the InterPlanetary File System. IPFS starts with a desire to have filesystems that work even when there are long delays involved (such as would be the case with interplanetary space travel). IPLD builds on top of this by allowing us to reference data in IPFS - or elsewhere.
+
+When we get data from the internet by accessing a webpage in our browser, we know it comes from the right place if the URL is https. This is because the HTTPS protocol gives some security that the data hasn't been compromised, for instance by a man-in-the-middle attack. (Of course, sometimes not even HTTPS is enough! TODO: add symantec & fake certificates). However, while we know that the data comes from the right place, we _don’t_ know if it was the data we intended to get!
+
+The same problem occurs with links: we don’t know if a link is still linking to the right page when we follow it. Someone may have removed the page, or changed it, or set up a redirect. Finally, the general problem of the current web is that we trust the source to give us the right data. This works fine - but it puts a bottleneck on where you can get the data. Other computers in the network cannot really help with sharing the load of serving data to you, even if they have the data themselves. This is inefficient and suboptimal.
+
+There are three things that would solve each of these issues: secure linking, distributed naming and immutable content. Where does IPLD fit into this? Well, IPLD satisfies each of these three properties. IPLD is a data format to describe datasets where data can link to other data via cryptographic hashing. IPLD also provides a path scheme to point to some data in the datasets.
+
+Let’s unroll what we just said, to make this more clear.
 
 # The Basics
-## Data model
-- Let’s start explaining IPLD and its data model.
-- JSON is one of the most popular semi-structured data formats on the Web.
-- The key reason JSON has great adoption is their simplicity.
-- Although we don’t really “use” JSON in IPLD,  we use the the same notation
 
-```
-object1 = {
+## Data model
+
+Let’s start by explaining IPLD and its data model.
+
+JSON (JavaScript Object Notation) is one of the most popular semi-structured data formats on the Web. The key reason JSON has great adoption is its simplicity. Although we don’t really “use” JSON in IPLD,  we use the the same notation.
+
+Let's take an example: here is Mr. Slippery, one of the main characters of _True Names_ by Vinge, in JSON:
+
+```js
+var object1 = {
   name: “Mr. Slippery”,
   job: [“Writer”, “Spy”]
 }
-// Mr. Slippery is the main character of True Names by Vinge
 ```
 
-- Alright, this is a JSON object, which is also a valid IPLD object.
+This is a JSON object (or, specifically, the variable `object1` here is assigned to the value of a JSON object). This is _also_ a valid IPLD object.
 
 ### Naming things with hashes
-- In IPLD, we refer to objects with their cryptographic hash.
-- A cryptographic hash is a one way function (link to wikipedia).
-- For any given input it returns a string of bits of the same size.
-- Every object has one cryptographic hash.
-- It is impossible (well, really really difficult) given a hash to know what content it refers to 
-- and given two hashes to know if the content was similar.
 
-- The hash of object1 is XXXX (well, this is a multihash, read more here)
-- if we remove the dot from Mr, the hash is YYYY.
-- In IPLD cryptographic hashes ensure that the content cannot change.
-- If we ask to a network (like the ipfs network) for a hash
-- then, they cannot lie about the content that they are giving
-- since you can generate the hash of the content received and check if it is the same one to the one that you asked for!
+In IPLD, we refer to objects with their cryptographic hash. A cryptographic hash is the result of a [one way function](https://en.wikipedia.org/wiki/One-way_function). For any given input, it returns a string of bits. Thst string is always the same size as any other returned string by the function, and looks like this: `QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o`. Normally, the string is a combination of symbols that look random. Importantly, every object has only one cryptographic hash that can be returned by a given cryptographic function. This means you could put the same input through a cryptographic function a million times, and it would always return the same result.
+
+Also importantly, it is impossible (well, really really difficult) to tell, given a hash, what content it refers to. That is why it is a one way function - data doesn't flow both ways. You also can't tell easily, given two hashes, if the content was similar.
+
+The hash of `object1` is `QmYZJihnfxkxX9vRjBfdmyyr7zp9Tf9yKiqinjKJCbbdcG`. (Well, this is a [multihash](https://github.com/multiformats/multihash).) If we remove the dot from `Mr`, the hash is `QmbWMzj99vN32JMjhdq1H3iKPbVgJsLbRgwhMHfkHiq3Xb`. The hashes are completely different!
+
+In IPLD, cryptographic hashes ensure that the content cannot change. If we ask a network (like the IPFS network) for a hash, then, they cannot lie about the content that they are giving, since you can generate the hash of the content received and check if it is the same as the one that you asked for!
 
 EXERCISE: Write your own IPLD object and use the IPFS command line to add it to the network
 
