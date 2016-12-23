@@ -1,8 +1,8 @@
 # Tutorial
 
-This tutorial will teach you about how to use IPLD. We'll start from the very basics, and end with some examples.
+In this tutorial, you will learn how to use IPLD. We'll start from the very basics, and end with some examples.
 
-IPLD stands for InterPlanetary Linked Data. This is based off of [IPFS](https://ipfs.io), which is the InterPlanetary File System. IPFS starts with a desire to have filesystems that work even when there are long delays involved (such as would be the case with interplanetary space travel). IPLD builds on top of this by allowing us to reference data in IPFS - or elsewhere.
+IPLD stands for InterPlanetary Linked Data. This is based off of [IPFS](https://ipfs.io), which is the InterPlanetary File System. IPFS starts with a desire to have filesystems that work even when there are long delays involved (such as would be the case with interplanetary space travel!). IPLD builds on top of this by allowing us to reference data in IPFS - or elsewhere.
 
 When we get data from the internet by accessing a webpage in our browser, we know it comes from the right place if the URL is https. This is because the HTTPS protocol gives some security that the data hasn't been compromised, for instance by a man-in-the-middle attack. (Of course, sometimes not even HTTPS is enough! TODO: add symantec & fake certificates). However, while we know that the data comes from the right place, we _don’t_ know if it was the data we intended to get!
 
@@ -35,7 +35,7 @@ This is a JSON object (or, specifically, the variable `object1` here is assigned
 
 In IPLD, we refer to objects with their cryptographic hash. A cryptographic hash is the result of a [one way function](https://en.wikipedia.org/wiki/One-way_function). For any given input, it returns a string of bits. Thst string is always the same size as any other returned string by the function, and looks like this: `QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o`. Normally, the string is a combination of symbols that look random. Importantly, every object has only one cryptographic hash that can be returned by a given cryptographic function. This means you could put the same input through a cryptographic function a million times, and it would always return the same result.
 
-Also importantly, it is impossible (well, really really difficult) to tell, given a hash, what content it refers to. That is why it is a one way function - data doesn't flow both ways. You also can't tell easily, given two hashes, if the content was similar.
+Also importantly, it is impossible (well, really really difficult) to tell, given a hash, what content it refers to. That is why it is a one way function - data doesn't flow both ways. You also can't tell, given two hashes, if the content was similar.
 
 The hash of `object1` is `QmYZJihnfxkxX9vRjBfdmyyr7zp9Tf9yKiqinjKJCbbdcG`. (Well, this is a [multihash](https://github.com/multiformats/multihash).) If we remove the dot from `Mr`, the hash is `QmbWMzj99vN32JMjhdq1H3iKPbVgJsLbRgwhMHfkHiq3Xb`. The hashes are completely different!
 
