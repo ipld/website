@@ -57,7 +57,7 @@ css: install
 js: install
 	$(PREPEND)rsync js/ static/js $(APPEND)
 
-minify: install minify-js minify-img $(APPEND)
+minify: install minify-js minify-img
 
 minify-js: install
 	$(PREPEND)find static/js -name '*.js' -exec $(NPMBIN)/uglifyjs {} --compress --output {} $(APPEND) \;
