@@ -21,7 +21,7 @@ build: clean install lint css js minify
 	echo "Site built out to ./public dir"
 
 help:
-	@echo 'Makefile for a filecoin.io, a hugo built static site.                                                          '
+	@echo 'Makefile for ipld.io, a hugo built static site.                                                          '
 	@echo '                                                                                                          '
 	@echo 'Usage:                                                                                                    '
 	@echo '   make                                Build the optimised site to ./$(OUTPUTDIR)                         '
