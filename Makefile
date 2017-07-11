@@ -55,7 +55,7 @@ css: install
 	$(PREPEND)$(NPMBIN)/lessc --clean-css --autoprefix less/main.less static/css/main.css $(APPEND)
 
 js: install
-	$(PREPEND)rsync js/ static/js $(APPEND)
+	$(PREPEND)rsync js/* static/js $(APPEND)
 
 minify: install minify-js minify-img
 
@@ -69,6 +69,7 @@ dev: install css js
 	$(PREPEND)[ ! -f $(PIDFILE) ] || rm $(PIDFILE) ; \
 	touch $(PIDFILE) ; \
 	$(NPMBIN)/nodemon --watch css --exec "$(NPMBIN)/lessc --clean-css --autoprefix less/main.less static/css/main.css" & echo $$! >> $(PIDFILE) ; \
+	$(NPMBIN)/nodemon --watch js --exec "rsync js/* static/js" & echo $$! >> $(PIDFILE) ; \
 	hugo server -w & echo $$! >> $(PIDFILE)
 
 dev-stop:
