@@ -21,6 +21,12 @@ The implementation aims to progressively enhance the content. The styling is don
 git clone https://github.com/ipld/website
 ```
 
+Now install the npm dependencies for the build scripts.
+
+```sh
+npm install
+```
+
 ## Usage
 
 To deploy the site ipld.io, run:
