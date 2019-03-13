@@ -1,4 +1,4 @@
-workflow "Pin to IPFS on push" {
+workflow "Pin to IPFS" {
   on = "push"
   resolves = ["Pin to IPFS Cluster"]
 }
