@@ -9,7 +9,7 @@ action "Build" {
 }
 
 action "Pin to IPFS Cluster" {
-  uses = "ipfs-shipyard/ipfs-github-action"
+  uses = "ipfs-shipyard/ipfs-github-action@master"
   needs = ["Build"]
   args = "public"
   secrets = ["GITHUB_TOKEN", "CLUSTER_USER", "CLUSTER_PASSWORD"]
