@@ -12,5 +12,5 @@ action "Pin to IPFS Cluster" {
   uses = "ipfs-shipyard/ipfs-github-action@master"
   needs = ["Build"]
   secrets = ["GITHUB_TOKEN", "CLUSTER_USER", "CLUSTER_PASSWORD"]
-  args = "\"$GITHUB_WORKSPACE/public\""
+  args = "/github/workspace/public"
 }
