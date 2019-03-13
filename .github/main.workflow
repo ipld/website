@@ -1,4 +1,4 @@
-workflow "Add to IPFS" {
+workflow "Add site to IPFS" {
   on = "push"
   resolves = ["Pin to IPFS Cluster"]
 }
