@@ -1,3 +1,7 @@
+# ⚠️ DEPRECATED
+Items in this repo may be outdated or aspirational.
+As of 202107, this IPLD website repo has been deprecated in favor of https://github.com/ipld/ipld (https://ipld.io/), which has been audited to at least not include any inaccurate information.
+
 # IPLD website
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
