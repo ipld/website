@@ -1,3 +1,20 @@
+
+!!!
+
+The website source repo has **moved**.
+
+We're now building the website out sources of the [ipld/ipld](https://github.com/ipld/ipld/) meta-repo,
+where it's handled in a unified way with all the docs and specs content that needs the publishing!
+
+All documentation, fixtures, specifications, and web content is now gathered into that repo.
+Please update your links, and direct new contributions there.
+
+The website is still published at https://ipld.io/ , as before.
+
+!!!
+
+---
+
 # IPLD website
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
