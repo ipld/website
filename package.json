@@ -26,7 +26,7 @@
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^5.2.2",
-    "less": "^2.7.2",
+    "less": "^4.5.1",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
     "nodemon": "^1.18.10",
