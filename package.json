@@ -32,7 +32,7 @@
     "nodemon": "^1.18.10",
     "options": "0.0.6",
     "standard": "^10.0.2",
-    "surge": "^0.19.0",
+    "surge": "^0.24.6",
     "tachyons": "^4.7.4",
     "uglify-js": "^3.0.23"
   }
